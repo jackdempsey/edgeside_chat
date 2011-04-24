@@ -14,7 +14,7 @@
     document.getElementById('chat').appendChild(el);
     return document.getElementById('chat').scrollTop = 1000000;
   };
-  send = function() {
+  window.send = function() {
     var val;
     val = document.getElementById('text').value;
     socket.send(val);

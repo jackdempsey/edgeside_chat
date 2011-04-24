@@ -11,7 +11,7 @@ message = (obj) ->
   document.getElementById('chat').appendChild el
   document.getElementById('chat').scrollTop = 1000000
 
-send = ->
+window.send = ->
   val = document.getElementById('text').value
   socket.send val
   message message: ['you', val]
