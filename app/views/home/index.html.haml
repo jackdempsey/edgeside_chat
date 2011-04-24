@@ -3,6 +3,6 @@
 #chat
   %p Connecting...
 
-#form{:onSubmit=>"send(); return false"}
+%form#form{:onSubmit=>"send(); return false"}
   %input#text{:type => 'text', :autocomplete => 'off'}
   %input{:type => "submit", :value => "Send"}
