@@ -41,7 +41,7 @@
     res.write('404');
     return res.end();
   };
-  server.listen(8080);
+  server.listen(3001);
   io = io.listen(server);
   buffer = [];
   io.on('connection', function(client) {

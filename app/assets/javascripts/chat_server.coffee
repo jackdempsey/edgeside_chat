@@ -33,7 +33,7 @@ send404 = (res) ->
   res.write('404')
   res.end()
 
-server.listen 8080
+server.listen 3001
 
 # socket.io, I choose you
 # simplest chat application evar
