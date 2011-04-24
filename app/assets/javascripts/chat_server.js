@@ -1,12 +1,10 @@
 (function() {
-  var buffer, fs, http, io, send404, server, sys, url, _ref;
+  var buffer, fs, http, io, send404, server, sys, url;
   http = require('http');
   url = require('url');
   fs = require('fs');
   io = require('socket.io');
-  sys = require((_ref = process.binding('natives').util) != null ? _ref : {
-    'util': 'sys'
-  });
+  sys = require('sys');
   server = http.createServer(function(req, res) {
     var path;
     path = url.parse(req.url).pathname;

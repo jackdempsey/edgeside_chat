@@ -2,7 +2,9 @@ http = require 'http'
 url  = require 'url'
 fs   = require 'fs'
 io   = require 'socket.io'
-sys  = require process.binding('natives').util ? 'util' : 'sys'
+# next line blows up. dunno why, so just using sys
+#sys  = require process.binding('natives').util ? 'util' : 'sys'
+sys  = require 'sys'
     
 server = http.createServer (req, res) ->
   # your normal server code
