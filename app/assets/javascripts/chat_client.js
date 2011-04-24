@@ -1,17 +1,11 @@
 (function() {
-  var esc, message, send, socket;
-  var __indexOf = Array.prototype.indexOf || function(item) {
-    for (var i = 0, l = this.length; i < l; i++) {
-      if (this[i] === item) return i;
-    }
-    return -1;
-  };
+  var esc, message, socket;
   message = function(obj) {
     var el;
     el = document.createElement('p');
-    if (__indexOf.call(obj, 'announcement') >= 0) {
+    if ('announcement' in obj) {
       el.innerHTML = "<em>" + (esc(obj.announcement)) + "</em>";
-    } else if (__indexOf.call(obj, 'message') >= 0) {
+    } else if ('message' in obj) {
       el.innerHTML = "<b>" + (esc(obj.message[0])) + ":</b>" + (esc(obj.message[1]));
     }
     if (obj.message && window.console && console.log) {

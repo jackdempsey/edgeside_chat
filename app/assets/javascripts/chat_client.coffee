@@ -1,8 +1,8 @@
 message = (obj) ->
   el = document.createElement 'p'
-  if  'announcement' in obj
+  if 'announcement' of obj
     el.innerHTML = "<em>#{esc obj.announcement}</em>"
-  else if 'message' in obj
+  else if 'message' of obj
     el.innerHTML = "<b>#{esc obj.message[0]}:</b>#{esc obj.message[1]}"
   
   if obj.message && window.console && console.log
