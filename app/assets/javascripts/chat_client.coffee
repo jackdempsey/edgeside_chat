@@ -24,7 +24,7 @@ socket = new io.Socket null, port: 3001, rememberTransport: false
 socket.connect()
 
 socket.on 'message', (obj) ->
-  if 'buffer' in obj
+  if 'buffer' of obj
     document.getElementById('form').style.display = 'block'
     document.getElementById('chat').innerHTML = ''
     

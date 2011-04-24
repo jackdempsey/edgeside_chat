@@ -39,7 +39,7 @@
   socket.connect();
   socket.on('message', function(obj) {
     var m, _i, _len, _ref, _results;
-    if (__indexOf.call(obj, 'buffer') >= 0) {
+    if ('buffer' in obj) {
       document.getElementById('form').style.display = 'block';
       document.getElementById('chat').innerHTML = '';
       _ref = obj.buffer;
