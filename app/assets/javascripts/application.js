@@ -3,5 +3,4 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require chat_client
 //= require json
