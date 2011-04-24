@@ -1,0 +1,8 @@
+%h1 Sample chat client
+
+#chat
+  %p Connecting...
+
+#form{:onSubmit=>"send(); return false"}
+  %input#text{:type => 'text', :autocomplete => 'off'}
+  %input{:type => "submit", :value => "Send"}
