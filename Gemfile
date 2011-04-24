@@ -12,6 +12,7 @@ gem 'sqlite3'
 gem 'json'
 gem 'sass', '~> 3.1.0.alpha'
 gem 'coffee-script'
+gem 'haml'
 
 # Use unicorn as the web server
 # gem 'unicorn'

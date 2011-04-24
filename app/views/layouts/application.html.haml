@@ -1,0 +1,11 @@
+!!!
+%html
+  %head
+    %title EdgesideChat
+    %script{:src => "http://localhost:3001/socket.io/socket.io.js"}
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    / for ie
+    = csrf_meta_tags
+  %body
+    = yield
