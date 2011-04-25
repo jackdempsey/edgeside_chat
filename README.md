@@ -36,23 +36,30 @@ I wanted to give a real example of how you could make use of Sprockets and Coffe
 
 1. If your JS looks like:
 
+```javascript
   if ('foo' in bar)
     ...
+```
 
   then your CoffeeScript should look like:
 
+```coffeescript
   if 'foo' of bar
     ...
-
-That one tripped me up several times, and was easy to overlook. You'll see some commits dedicated to just it in the history. 
+```
+  That one tripped me up several times, and was easy to overlook. You'll see some commits dedicated to just it in the history.
 
 2. Remember, CoffeeScript files are automatically wrapped in a closure. If you define some functions in a .coffee file, and trying to access them gives you an Undefined, set them on window:
 
+```coffeescript
   window.foo = -> console.log "Hey There."
+```
 
 3. CoffeeScript also doesn't know about your document being ready. Remember kids, JavaScript is not just for image rollovers anymore. If things aren't working right, check and see if you 
 wrapped your code in a call to $:
 
+```coffeescript
   $ ->
 	window.foo = -> console.log "This should run when the DOM is ready."
+```
 
